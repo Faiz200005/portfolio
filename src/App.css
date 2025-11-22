@@ -1,0 +1,387 @@
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #0f172a;              /* Bleu nuit */
+  --bg-accent: #1e3a8a;       /* Bleu profond */
+  --bg-accent-light: #1d4ed8; /* Bleu moyen */
+  --text-main: #e2e8f0;
+  --text-light: #cbd5e1;
+  --muted: #94a3b8;
+  --accent: #3b82f6;          /* Bleu vif */
+  --card: #0b1739;            /* Carte bleu foncé */
+  --border: #1e293b;
+}
+
+/* GLOBAL */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #1e293b 0%, #0f172a 70%);
+  color: var(--text-main);
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+.logo-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.logo-role {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.navbar-right {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.navbar-right a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.navbar-right a:hover {
+  color: var(--accent);
+}
+
+/* HERO LAYOUT (SIDEBAR + CONTENU) */
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 1.2rem 3rem;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr); /* sidebar + contenu */
+  gap: 2.4rem;
+  align-items: flex-start;
+}
+
+/* SIDEBAR GAUCHE */
+.hero-left {
+  background: linear-gradient(180deg, var(--bg-accent-light), var(--bg));
+  border-radius: 0.8rem;
+  padding: 1.4rem 0.9rem;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 240px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  border-radius: 0.8rem;
+  padding: 1.6rem 1.4rem;
+}
+
+.profile-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  background: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e2e8f0;
+}
+
+.profile-name {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+.profile-separator {
+  height: 1px;
+  background: var(--border);
+  margin: 1.2rem 0;
+}
+
+.profile-info {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.profile-info p + p {
+  margin-top: 0.3rem;
+}
+
+/* ICÔNES SOCIAL MEDIA */
+.profile-socials {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.profile-socials a {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+.profile-socials a:hover {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* CONTENU DROITE */
+.hero-right {
+  align-self: center;
+}
+
+.hero-hello {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  color: var(--muted);
+  margin-top: 0.4rem;
+  margin-bottom: 1.4rem;
+  font-size: 1rem;
+}
+
+/* ONGLET CV / PROJETS / INTÉRÊTS */
+.hero-tabs {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 1.3rem;
+}
+
+.tab-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: 0.25s;
+  font-size: 0.88rem;
+}
+
+.tab-btn:hover {
+  border-color: var(--accent);
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* ANIMATION DE CONTENU D'ONGLET */
+.tab-content {
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  margin-bottom: 0.7rem;
+}
+
+.tab-content-wrapper {
+  margin-top: 1rem;
+}
+
+.tab-content h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* LISTE DANS CV / PROJETS */
+.tab-content ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.tab-content li + li {
+  margin-top: 0.35rem;
+}
+
+/* CENTRES D’INTÉRÊT */
+.interests-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.interest-card {
+  background: #020617;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  width: 220px;
+  overflow: hidden; /* empêche l'image de dépasser */
+}
+
+.interest-image {
+  display: block;
+  width: 100%;
+  height: 140px;        /* règle la taille de l'image */
+  object-fit: cover;    /* cover = recadrage propre, contain = voir tout */
+  border-radius: 0.45rem;
+}
+
+.interest-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.interest-text {
+  font-size: 0.82rem;
+  color: var(--text-light);
+}
+
+/* SECTION CONTACT */
+.contact-section {
+  background: #0a1227;
+  padding: 2.8rem 1.2rem;
+}
+
+.contact-card {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #0f1b36;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  padding: 2rem;
+}
+
+.contact-card h2 {
+  font-size: 1rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.contact-info a {
+  color: var(--accent);
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.footer {
+  max-width: 1100px;
+  text-align: center;
+  margin: 1.5rem auto;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    order: 1;
+  }
+
+  .hero-right {
+    order: 2;
+  }
+
+  .profile-card {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .hero-hello {
+    font-size: 2.6rem;
+  }
+
+  .interest-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
