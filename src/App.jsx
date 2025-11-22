@@ -105,7 +105,7 @@ function App() {
               className={activeTab === "interests" ? "tab-btn active" : "tab-btn"}
               onClick={() => setActiveTab("interests")}
             >
-              Centres d’intérêt
+              Centres d’intérêts
             </button>
           </div>
 
