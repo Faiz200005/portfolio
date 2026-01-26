@@ -368,6 +368,16 @@ body {
     margin: 0 auto;
   }
 }
+.project-media-wrapper {
+  margin-top: 12px;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  display: block;
+}
 
 @media (max-width: 700px) {
   .navbar {
@@ -384,16 +394,7 @@ body {
     width: 100%;
     max-width: 100%;
   }
-.project-media-wrapper {
-  margin-top: 12px;
-}
 
-.project-video {
-  width: 100%;
-  max-width: 520px;
-  border-radius: 12px;
-  display: block;
-}
 
 
 }
