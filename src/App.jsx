@@ -155,103 +155,41 @@ function App() {
             )}
 
             {/* Onglet Projets */}
-            {activeTab === "projects" && (
-              <div className="tab-content" id="projects">
-                <h3>Projets</h3>
-                <ul>
-                  <li>
-                    <strong>Portfolio React</strong> : ce site, réalisé avec React &amp; Vite,
-                    pour présenter mon profil de manière moderne et responsive.
-                  </li>
-                  <li>
-                    <strong>Projets académiques ISN</strong> : travaux pratiques en
-                    systèmes, réseaux, algorithmique et développement web.
-                  </li>
-                  <li>
-             <li>
-  <strong>Projets robot</strong> : J’ai participé à la conception et la programmation
-  d’un robot autonome dans le cadre des travaux pratiques de microprocesseur. Le projet
-  consistait à programmer en langage bas niveau (C embarqué) un microcontrôleur MSP430
-  pour piloter : les moteurs via PWM, les capteurs d’obstacles, le système de prise de
-  décision (éviter, contourner, ajuster trajectoire), la gestion des interruptions et du timer.
+{activeTab === "projects" && (
+  <div className="tab-content" id="projects">
+    <h3>Projets</h3>
+    <ul>
+      <li>
+        <strong>Portfolio React</strong> : ce site, réalisé avec React &amp; Vite,
+        pour présenter mon profil de manière moderne et responsive.
+      </li>
 
-  {/* Image d’illustration */}
-  <div className="project-media-wrapper">
-  <video
-    className="project-video"
-    src="robot.mp4"
-    controls
-    playsInline
-  />
-</div>
-</li>
+      <li>
+        <strong>Projets académiques ISN</strong> : travaux pratiques en systèmes,
+        réseaux, algorithmique et développement web.
+      </li>
 
-                    
-                  </li>
-                </ul>
-              </div>
-            )}
+      <li>
+        <strong>Projet robot</strong> : J’ai participé à la conception et la
+        programmation d’un robot autonome dans le cadre des travaux pratiques de
+        microprocesseur. Le projet consistait à programmer en langage bas niveau
+        (C embarqué) un microcontrôleur MSP430 pour piloter : les moteurs via PWM,
+        les capteurs d’obstacles, le système de prise de décision (éviter,
+        contourner, ajuster trajectoire), la gestion des interruptions et du timer.
 
-            {/* Onglet Centres d’intérêt */}
-            {activeTab === "interests" && (
-              <div className="tab-content" id="interests">
-                <h3>Centres d’intérêt</h3>
-                <div className="interests-grid">
-                  <div className="interest-card">
-                    <img
-                      className="interest-image"
-                      src="dev.jpg"
-                      alt="Centre d’intérêt 1"
-                    />
-                    <div className="interest-title">Informatique & développement</div>
-                    <p className="interest-text">
-                      Veille sur les nouvelles technologies, frameworks et outils liés
-                      au développement logiciel et au web.
-                    </p>
-                  </div>
-
-                  <div className="interest-card">
-                    <img
-                      className="interest-image"
-                      src="/jeux.jpg"
-                      alt="Centre d’intérêt 2"
-                    />
-                    <div className="interest-title">Jeux vidéo</div>
-                    <p className="interest-text">
-                      Intérêt pour les jeux vidéo, l’univers compétitif et la logique
-                      derrière le game design.
-                    </p>
-                  </div>
-
-                  <div className="interest-card">
-                    <img
-                      className="interest-image"
-                      src="/foot.jpeg"
-                      alt="Centre d’intérêt 3"
-                    />
-                    <div className="interest-title">Sport</div>
-                    <p className="interest-text">
-                      Pratique sportive régulière pour garder un bon équilibre entre
-                      travail, énergie et concentration.
-                    </p>
-                  </div>
-
-                    <div className="interest-card">
-                    <img
-                      className="interest-image"
-                      src="/voyage.jpeg"
-                      alt="Centre d’intérêt 4"
-                    />
-                    <div className="interest-title">Voyages</div>
-                    <p className="interest-text">
-                      Passionné par la découverte de nouvelles cultures et l’ouverture à d’autres modes de vie.
-                    </p>
-
-                    
-                  </div>
-                </div>
-              </div>
-            )}
+        <div className="project-media-wrapper">
+          <video
+            className="project-video"
+            src="/robot.mp4"
+            controls
+            playsInline
+            preload="metadata"
+          />
+        </div>
+      </li>
+    </ul>
+  </div>
+)}
           </div>
         </section>
       </main>
