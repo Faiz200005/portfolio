@@ -375,9 +375,12 @@ body {
 .project-video {
   width: 100%;
   max-width: 520px;
-  border-radius: 12px;
   display: block;
+  border-radius: 12px;
+  min-height: 260px; /* TEST */
+  background: #000;  /* pour voir la zone même si ça ne charge pas */
 }
+
 
 @media (max-width: 700px) {
   .navbar {
