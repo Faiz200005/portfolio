@@ -101,6 +101,14 @@ function App() {
             >
               Projets
             </button>
+            
+            <button
+              className={activeTab === "diploma" ? "tab-btn active" : "tab-btn"}
+              onClick={() => setActiveTab("diploma")}
+            >
+              Diplôme
+            </button>
+
             <button
               className={activeTab === "interests" ? "tab-btn active" : "tab-btn"}
               onClick={() => setActiveTab("interests")}
@@ -128,7 +136,7 @@ function App() {
             {/* Onglet CV */}
             {activeTab === "cv" && (
               <div className="tab-content">
-                <h3>Expériences principales</h3>
+                <h3>Expériences</h3>
                 <ul>
                   <li>
                     <strong>Agent de tri postal – La Poste (2024)</strong> : organisation
@@ -160,16 +168,24 @@ function App() {
                     systèmes, réseaux, algorithmique et développement web.
                   </li>
                   <li>
-                    <strong>Projets robot </strong> :
-                    J’ai participé à la conception et la programmation d’un robot autonome dans le cadre des travaux pratiques de microprocesseur. Le projet consistait à programmer en langage bas niveau (C embarqué) un microcontrôleur MSP430 pour piloter :
-les moteurs via PWM,
+             <li>
+  <strong>Projets robot</strong> : J’ai participé à la conception et la programmation
+  d’un robot autonome dans le cadre des travaux pratiques de microprocesseur. Le projet
+  consistait à programmer en langage bas niveau (C embarqué) un microcontrôleur MSP430
+  pour piloter : les moteurs via PWM, les capteurs d’obstacles, le système de prise de
+  décision (éviter, contourner, ajuster trajectoire), la gestion des interruptions et du timer.
 
-les capteurs d’obstacles,
+  {/* Image d’illustration */}
+  <div className="project-media-wrapper">
+  <video
+    className="project-video"
+    src="robot.mp4"
+    controls
+    playsInline
+  />
+</div>
+</li>
 
-le système de prise de décision (éviter, contourner, ajuster trajectoire),
-
-la gestion des interruptions et du timer.
-                    
                     
                   </li>
                 </ul>

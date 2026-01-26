@@ -384,4 +384,16 @@ body {
     width: 100%;
     max-width: 100%;
   }
+.project-media-wrapper {
+  margin-top: 12px;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  display: block;
+}
+
+
 }
