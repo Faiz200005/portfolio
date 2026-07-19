@@ -231,7 +231,7 @@ function App() {
           >
             <div className="pill">Disponible pour des projets concrets</div>
             <h1>
-              Je développe des solutions <span>{displayedWord || "full stack"}</span>
+              Je conçois des applications web <span>{displayedWord || "full stack"}</span>
             </h1>
             <p>
               Développeur full stack, curieux des architectures web et de l’IA, je conçois des produits fonctionnels, performants et prêts à évoluer, du back-end à l’expérience utilisateur.
@@ -541,7 +541,7 @@ function App() {
               <a href="mailto:Wanrado.chabi@groupe-esigelec.org">
                 <Mail size={18} /> Wanrado.chabi@groupe-esigelec.org
               </a>
-              <a href="https://www.linkedin.com/in/faiz-chabi-3b367a131" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/fa%C3%AFz-chabi-3b367a131/" target="_blank" rel="noreferrer">
                 <GitBranchIcon size={18} /> Profil LinkedIn
               </a>
               <div className="contact-details">
